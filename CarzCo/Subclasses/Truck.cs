@@ -7,10 +7,11 @@ namespace CarzCo.Subclasses
 {
     internal class Truck : Vehicle, IDriveable
     {
-        public Truck (string truckBrand, string truckModel, string Brand, string Model) : base (Brand, Model)
+        public Truck ( string aBrand, string aModel) : base (aBrand, aModel)
         {
-            truckBrand = Brand;
-            truckModel = Model;
+            
+            Model = aModel;
+            Brand = aBrand;
         }
         //ärver
         //make sound
