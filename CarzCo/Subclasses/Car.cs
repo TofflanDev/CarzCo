@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Channels;
 
 namespace CarzCo.Subclasses
 {
@@ -15,14 +16,15 @@ namespace CarzCo.Subclasses
             Model = aModel;
         }
 
+        public override string ToString()
+        {
+            return $"{Brand} {Model}";
+        }
         public void Drive()
         {
-            Console.WriteLine("Volvo dives away");
+            Console.WriteLine("Car vrom vrom");
         }
 
-
-        //ÄRVER FRÅN Vehicle 
-        //SUBKLASS KLASS
 
     }
 }
