@@ -6,6 +6,6 @@ namespace CarzCo.Interface
 {
     interface IDriveable
     {
-        //MAKE SOUND
+        void Drive();
     }
 }
