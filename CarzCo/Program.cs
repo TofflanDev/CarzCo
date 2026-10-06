@@ -16,27 +16,32 @@ namespace CarzCo
             
 
 
-            Car volvo = new Car("Volvo", "S40");
+            //Car volvo = new Car("Volvo", "S40");
+            Truck truck = new Truck("Scania", "R500");
+            Truck truck2 = new Truck("Volvo", "FH16");
 
+            vechiles.Add(truck); vechiles.Add(truck2);
 
-            volvo.PrintVehicleInfo();
-            volvo.Drive();
+            FilterVehicles<Truck>(vechiles);
 
-            Motorcycle ferrari = new Motorcycle("Ferrari", "model x");
+            //volvo.PrintVehicleInfo();
+            //volvo.Drive();
 
-            ferrari.Drive();
+            //Motorcycle ferrari = new Motorcycle("Ferrari", "model x");
 
-            ferrari.PrintVehicleInfo();
+            //ferrari.Drive();
+
+            //ferrari.PrintVehicleInfo();
         }
     
 
-    public void AddVehicle(List<Vehicle> vehicles, Vehicle aVehicle)
+    static public void AddVehicle(List<Vehicle> vehicles, Vehicle aVehicle)
         {
             vehicles.Add(aVehicle);
            
         }
 
-    public void RemoveVehicle(List<Vehicle> vehicles, Vehicle aVehicle)
+    static public void RemoveVehicle(List<Vehicle> vehicles, Vehicle aVehicle)
         {
             vehicles.Remove(aVehicle);
         }
@@ -45,5 +50,14 @@ namespace CarzCo
 
 
 
-    }
+    
+
+    static public void FilterVehicles <T>(List<Vehicle> vehicleList) where T  : Vehicle
+        {
+            foreach (var vehicle in vehicleList.OfType<T>())
+            {
+                vehicle.PrintVehicleInfo();
+            }
+        }
+}
 }
