@@ -4,8 +4,9 @@ using System.Text;
 
 namespace CarzCo.Subclasses
 {
-    internal class Cars
+    internal class Cars : Vehicle
     {
+
         //ÄRVER FRÅN Vehicle 
         //SUBKLASS KLASS
      

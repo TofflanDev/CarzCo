@@ -4,15 +4,33 @@ using System.Text;
 
 namespace CarzCo
 {
-    internal class Vehicle
+    abstract class Vehicle
     {
 
-        //ABSTRAKT VEHICLE HUVUD KLASS
-        //LIST KANSKE? som property
+        public List<Vehicle> vehiclesList = new List<Vehicle>();
+
+        public string Brand { get; set; } = " ";
+        public string Model { get; set; } = " ";
+            
+        
+        public Vehicle()
+        {
+        }
+        public Vehicle(string aBrandName,string aModelName)
+        {
+
+        }
+        public void AddVehicle(List<Vehicle> aVehiclesList)
+        {
+
+        }
+        public void RemoveVehicle(List<Vehicle> aVehiclesList)
+        {
+
+        }
+
+
         //Egenskaper som delas med andra
-        //Brand, Model
-        //add vehicle metod
-        //remove vehicle metod
         //FilterVehicles lista, tar emot listan av alla vehicles kanske?
     }
 }
