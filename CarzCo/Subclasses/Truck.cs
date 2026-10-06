@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CarzCo.Interface;
 
 namespace CarzCo.Subclasses
 {
-    internal class Truck : Vehicle
+    internal class Truck : Vehicle, IDriveable
     {
         public Truck (string truckBrand, string truckModel, string Brand, string Model) : base (Brand, Model)
         {
@@ -13,9 +14,9 @@ namespace CarzCo.Subclasses
         }
         //ärver
         //make sound
-        public void MakeSound ()
+        public void Drive ()
         {
-            Console.WriteLine("Vroom!");
+            Console.WriteLine("Truck vroom!");
         }
     }
 }

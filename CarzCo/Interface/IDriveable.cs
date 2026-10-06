@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CarzCo.Interface
 {
-    internal class IDriveable
+    interface IDriveable
     {
         //MAKE SOUND
     }
