@@ -28,6 +28,11 @@ namespace CarzCo
         {
 
         }
+        public void PrintVehicleInfo()
+        {
+            Console.WriteLine($"Vehicle Brand: {Brand}" +
+                $"\nModel: {Model}");
+        }
 
 
         //Egenskaper som delas med andra
