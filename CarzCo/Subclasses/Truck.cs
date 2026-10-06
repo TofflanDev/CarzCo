@@ -6,15 +6,16 @@ namespace CarzCo.Subclasses
 {
     internal class Truck : Vehicle
     {
-        public Truck (string Brand, string Model) : base (Brand, Model)
+        public Truck (string truckBrand, string truckModel, string Brand, string Model) : base (Brand, Model)
         {
-
+            truckBrand = Brand;
+            truckModel = Model;
         }
         //ärver
         //make sound
         public void MakeSound ()
         {
-            Console.WriteLine("Nu brummar det av truckens motorer.");
+            Console.WriteLine("Vroom!");
         }
     }
 }
