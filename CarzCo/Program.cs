@@ -8,7 +8,7 @@ namespace CarzCo
         {
             Car volvo = new Car("Volvo", "S40");
 
-
+            Console.WriteLine(volvo);
             volvo.PrintVehicleInfo();
             volvo.Drive();
         }
