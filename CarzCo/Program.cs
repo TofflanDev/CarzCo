@@ -6,8 +6,11 @@ namespace CarzCo
     {
         static void Main(string[] args)
         {
+            Car volvo = new Car("Volvo", "S40");
 
-            Console.WriteLine("Hello, World!");
+
+            volvo.PrintVehicleInfo();
+            volvo.Drive();
         }
     }
 }
