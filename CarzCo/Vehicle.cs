@@ -12,7 +12,6 @@ namespace CarzCo
         public string Brand { get; set; } = " ";
         public string Model { get; set; } = " ";
             
-        
         public Vehicle()
         {
         }
@@ -20,22 +19,11 @@ namespace CarzCo
         {
 
         }
-        public void AddVehicle(List<Vehicle> aVehiclesList)
-        {
-
-        }
-        public void RemoveVehicle(List<Vehicle> aVehiclesList)
-        {
-
-        }
         public void PrintVehicleInfo()
         {
             Console.WriteLine($"Vehicle Brand: {Brand}" +
-                $"\nModel: {Model}");
+                $" Model: {Model}");
         }
 
-
-        //Egenskaper som delas med andra
-        //FilterVehicles lista, tar emot listan av alla vehicles kanske?
     }
 }

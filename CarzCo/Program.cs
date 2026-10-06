@@ -8,56 +8,46 @@ namespace CarzCo
 
         static void Main(string[] args)
         {
-            List<Vehicle> vechiles = new List<Vehicle>()
-            {
-                
-            };
+            List<Vehicle> vehiclesList = new List<Vehicle>();
 
-            
-
-
-            //Car volvo = new Car("Volvo", "S40");
+            Car car = new Car("Volvo", "S40");
+            Motorcycle motorcycle = new Motorcycle("Ferrari", "model x");
             Truck truck = new Truck("Scania", "R500");
             Truck truck2 = new Truck("Volvo", "FH16");
 
-            vechiles.Add(truck); vechiles.Add(truck2);
+            Console.WriteLine("Car\n");
+            Console.WriteLine(car);
+            car.Drive();
 
-            FilterVehicles<Truck>(vechiles);
+            Console.WriteLine("\nMotorcycle\n");
+            motorcycle.PrintVehicleInfo();
+            motorcycle.Drive();
+            Console.WriteLine("\n");
+            AddVehicle(vehiclesList, truck);
 
-            //volvo.PrintVehicleInfo();
-            //volvo.Drive();
+            FilterVehicles<Truck>(vehiclesList);
 
-            //Motorcycle ferrari = new Motorcycle("Ferrari", "model x");
 
-            //ferrari.Drive();
-
-            //ferrari.PrintVehicleInfo();
         }
-    
 
-    static public void AddVehicle(List<Vehicle> vehicles, Vehicle aVehicle)
+
+        static public void AddVehicle(List<Vehicle> vehicles, Vehicle aVehicle)
         {
             vehicles.Add(aVehicle);
-           
+
         }
 
-    static public void RemoveVehicle(List<Vehicle> vehicles, Vehicle aVehicle)
+        static public void RemoveVehicle(List<Vehicle> vehicles, Vehicle aVehicle)
         {
             vehicles.Remove(aVehicle);
         }
 
-
-
-
-
-    
-
-    static public void FilterVehicles <T>(List<Vehicle> vehicleList) where T  : Vehicle
+        static public void FilterVehicles<T>(List<Vehicle> vehicleList) where T : Vehicle
         {
             foreach (var vehicle in vehicleList.OfType<T>())
             {
                 vehicle.PrintVehicleInfo();
             }
         }
-}
+    }
 }

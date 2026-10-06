@@ -26,8 +26,5 @@ namespace CarzCo.Subclasses
         }
 
 
-        //ÄRVER FRÅN Vehicle 
-        //SUBKLASS KLASS
-
     }
 }
