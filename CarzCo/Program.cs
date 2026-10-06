@@ -10,6 +10,15 @@ namespace CarzCo
 
             Console.WriteLine(car);
             car.Drive();
+
+            volvo.PrintVehicleInfo();
+            volvo.Drive();
+
+            Motorcycle ferrari = new Motorcycle("Ferrari", "model x");
+
+            ferrari.Drive();
+
+            ferrari.PrintVehicleInfo();
         }
     }
 }
